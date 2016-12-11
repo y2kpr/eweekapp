@@ -32,6 +32,7 @@ var StatusBar = require('StatusBar');
 var StyleSheet = require('StyleSheet');
 var View = require('View');
 var { Text } = require('F8Text');
+var InfoModal = require('../common/InfoModal');
 var LoginButton = require('../common/LoginButton');
 var TouchableOpacity = require('TouchableOpacity');
 
@@ -83,12 +84,7 @@ class LoginScreen extends React.Component {
             SAN FRANCISCO, CALIFORNIA
           </Animated.Text>
         </View>
-        <Animated.View style={[styles.section, styles.last, this.fadeIn(2500, 20)]}>
-          <Text style={styles.loginComment}>
-            Use Facebook to find your friends at F8.
-          </Text>
-          <LoginButton source="First screen" />
-        </Animated.View>
+        <InfoModal />
       </Image>
     );
   }

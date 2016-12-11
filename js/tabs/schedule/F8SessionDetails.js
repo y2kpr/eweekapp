@@ -163,7 +163,7 @@ var F8SessionDetails = React.createClass({
       </View>
     );
   },
-
+  /* If user did not login, prompt for an info modal */
   toggleAdded: function() {
     if (this.props.isAddedToSchedule) {
       this.props.removeFromScheduleWithPrompt();
@@ -318,6 +318,7 @@ function select(store, props) {
   return {
     isAddedToSchedule: !!store.schedule[props.session.id],
     isLoggedIn: store.user.isLoggedIn,
+    hasGivenInfo: store.user.hasGivenInfo,
     sharedSchedule: store.user.sharedSchedule,
     sessionURLTemplate: store.config.sessionURLTemplate,
     topics: store.topics,

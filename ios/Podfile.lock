@@ -66,11 +66,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   CodePush:
-    :path: "../node_modules/react-native-code-push"
+    :path: ../node_modules/react-native-code-push
   React:
-    :path: "../node_modules/react-native"
+    :path: ../node_modules/react-native
   react-native-fbsdk:
-    :path: "../node_modules/react-native-fbsdk/iOS"
+    :path: ../node_modules/react-native-fbsdk/iOS
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -83,4 +83,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: cb0411936cfdb2ef6ccae2a3fc8261c741029580
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.1.1

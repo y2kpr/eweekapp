@@ -29,6 +29,7 @@ import type {Action} from '../actions/types';
 export type State = {
   isLoggedIn: boolean;
   hasSkippedLogin: boolean;
+  hasGivenInfo: boolean;
   sharedSchedule: ?boolean;
   id: ?string;
   name: ?string;
@@ -37,6 +38,7 @@ export type State = {
 const initialState = {
   isLoggedIn: false,
   hasSkippedLogin: false,
+  hasGivenInfo: false,
   sharedSchedule: null,
   id: null,
   name: null,

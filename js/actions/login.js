@@ -63,7 +63,7 @@ async function _logInWithFacebook(source: ?string): Promise<Array<Action>> {
   const user = await Parse.User.currentAsync();
   user.set('facebook_id', profile.id);
   user.set('name', profile.name);
-  user.set('email', profile.email);
+  //user.set('email', profile.email);
   await user.save();
   await updateInstallation({user});
 
