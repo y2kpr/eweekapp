@@ -1,6 +1,6 @@
 # EWeek App 2017
 
-This is the entire source code of the official [EWeek](https://uteweek.com/) app of 2017 which is not available yet.
+This is the entire source code of the official [EWeek](https://www.uteweek.com/) app of 2017 which is not available yet.
 
 This project is built on top of a fork of [F8](https://github.com/fbsamples/f8app) app made by Facebook. Thank you for letting us use this!
 
