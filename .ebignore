@@ -2,6 +2,14 @@
 #
 .DS_Store
 
+# Ignore for deploying Parse Server with eb
+#
+ios/
+android/
+js/
+logs/
+npm-shrinkwrap.json
+
 # Xcode
 #
 build/
