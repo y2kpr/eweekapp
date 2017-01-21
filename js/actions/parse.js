@@ -32,6 +32,7 @@ import type { ThunkAction } from './types';
 
 const Maps = Parse.Object.extend('Maps');
 const Notification = Parse.Object.extend('Notification');
+const Attendees = Parse.Object.extend('Attendees');
 
 function loadParseQuery(type: string, query: Parse.Query): ThunkAction {
   return (dispatch) => {
@@ -45,6 +46,20 @@ function loadParseQuery(type: string, query: Parse.Query): ThunkAction {
       },
       error: logError,
     });
+  };
+}
+
+async function postAttendee(Name, Email, Year, Major): Promise<Action> {
+  var attendeeClass = Parse.Object.extend('Attendees');
+  var attendee = new attendeeClass();
+  attendee.set({
+    name: Name, email: Email, year: Year, majorOrSchool: Major
+  });
+  await attendee.save();
+  await InteractionManager.runAfterInteractions;
+  // Where to create the QR code?
+  return {
+    type: 'GIVEN_INFO'
   };
 }
 
@@ -62,4 +77,6 @@ module.exports = {
 
   loadNotifications: (): ThunkAction =>
     loadParseQuery('LOADED_NOTIFICATIONS', new Parse.Query(Notification)),
+
+  postAttendee
 };

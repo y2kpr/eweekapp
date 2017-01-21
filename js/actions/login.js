@@ -105,6 +105,12 @@ function skipLogin(): Action {
   };
 }
 
+function skipInfo(): Action {
+  return {
+    type: 'SKIPPED_INFO',
+  };
+}
+
 function logOut(): ThunkAction {
   return (dispatch) => {
     Parse.User.logOut();
@@ -149,4 +155,4 @@ function logOutWithPrompt(): ThunkAction {
   };
 }
 
-module.exports = {logInWithFacebook, skipLogin, logOut, logOutWithPrompt};
+module.exports = {logInWithFacebook, skipLogin, skipInfo, logOut, logOutWithPrompt};

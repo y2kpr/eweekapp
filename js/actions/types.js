@@ -39,6 +39,8 @@ export type Action =
   | { type: 'RESTORED_SCHEDULE', list: Array<ParseObject> }
   | { type: 'SKIPPED_LOGIN' }
   | { type: 'LOGGED_OUT' }
+  | { type: 'GIVEN_INFO' }
+  | { type: 'SKIPPED_INFO' }
   | { type: 'SESSION_ADDED', id: string }
   | { type: 'SESSION_REMOVED', id: string }
   | { type: 'SET_SHARING', enabled: boolean }

@@ -77,6 +77,7 @@ var F8App = React.createClass({
   },
 
   render: function() {
+    console.log("isLoggedIn is" + this.props.hasGivenInfo);
     if (!this.props.isLoggedIn) {
       return <LoginScreen />;
     }
@@ -102,8 +103,9 @@ var styles = StyleSheet.create({
 });
 
 function select(store) {
+  console.log("hasGivenInfo is" + store.user.hasGivenInfo);
   return {
-    isLoggedIn: store.user.isLoggedIn || store.user.hasSkippedLogin,
+    isLoggedIn: store.user.hasGivenInfo || store.user.hasSkippedInfo,
   };
 }
 
