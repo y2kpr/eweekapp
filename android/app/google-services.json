@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "558031326283",
+    "firebase_url": "https://eweekapp.firebaseio.com",
+    "project_id": "eweekapp",
+    "storage_bucket": "eweekapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558031326283:android:948c9fb2e377bf7a",
+        "android_client_info": {
+          "package_name": "com.facebook.eweekapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "558031326283-t1ui0pcfjgrcbud8jtjamham5ed085q9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRI6uexHv-YV8aritE6j6coC-8yi0LxDo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -30,6 +30,7 @@ export type State = {
   isLoggedIn: boolean;
   hasSkippedLogin: boolean;
   hasGivenInfo: boolean;
+  hasSkippedInfo: boolean;
   sharedSchedule: ?boolean;
   id: ?string;
   name: ?string;
@@ -39,6 +40,7 @@ const initialState = {
   isLoggedIn: false,
   hasSkippedLogin: false,
   hasGivenInfo: false,
+  hasSkippedInfo: false,
   sharedSchedule: null,
   id: null,
   name: null,
@@ -51,6 +53,7 @@ function user(state: State = initialState, action: Action): State {
       sharedSchedule = null;
     }
     return {
+      ...state,
       isLoggedIn: true,
       hasSkippedLogin: false,
       sharedSchedule,
@@ -59,12 +62,29 @@ function user(state: State = initialState, action: Action): State {
     };
   }
   if (action.type === 'SKIPPED_LOGIN') {
+    console.log("in USER SKIPPED_LOGIN REDUCER");
     return {
+      ...state,
       isLoggedIn: false,
       hasSkippedLogin: true,
       sharedSchedule: null,
       id: null,
       name: null,
+    };
+  }
+  if (action.type === 'SKIPPED_INFO') {
+    return {
+      ...state,
+      hasGivenInfo: false,
+      hasSkippedInfo: true,
+    };
+  }
+  if (action.type === 'GIVEN_INFO') {
+    console.log("in USER GIVEN_INFO REDUCER");
+    return {
+      ...state,
+      hasGivenInfo: true,
+      hasSkippedInfo: false,
     };
   }
   if (action.type === 'LOGGED_OUT') {

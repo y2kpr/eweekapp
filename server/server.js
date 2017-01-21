@@ -78,7 +78,7 @@ if (IS_DEVELOPMENT) {
         serverURL: '/parse',
         appId: APP_ID,
         masterKey: MASTER_KEY,
-        appName: 'F8-App-2016',
+        appName: 'eweek-app-2017',
       }],
       users,
     }, IS_DEVELOPMENT),
