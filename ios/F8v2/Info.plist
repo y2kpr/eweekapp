@@ -25,8 +25,8 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>619048868222429</string>
-				<string>f8</string>
+				<string>1848273238718073</string>
+				<string>eweekapp</string>
 			</array>
 		</dict>
 	</array>
@@ -35,7 +35,7 @@
 	<key>CodePushDeploymentKey</key>
 	<string>XZu3PfXXkUa7LkYujXEQtrdN4l87EJ6b-AFoe</string>
 	<key>FacebookAppID</key>
-	<string>619048868222429</string>
+	<string>1848273238718073</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fb-messenger-api</string>
