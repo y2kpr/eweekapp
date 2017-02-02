@@ -20,16 +20,12 @@
  * DEALINGS IN THE SOFTWARE
  */
 
-package com.facebook.f8;
+package com.utlea.eweek;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 
-import com.facebook.react.bridge.JavaScriptModule;
-import com.facebook.react.bridge.NativeModule;
-import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.uimanager.ViewManager;
 import com.facebook.CallbackManager;
 
 import com.facebook.FacebookSdk;
@@ -38,14 +34,13 @@ import com.facebook.appevents.AppEventsLogger;
 import android.content.Intent;
 import android.os.Bundle;
 
-import java.util.Collections;
 import java.util.Arrays;
 import java.util.List;
 
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.microsoft.codepush.react.CodePush;
 import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
-import com.facebook.reactnative.androidsdk.FBSDKPackage;
+import com.utlea.reactnative.androidsdk.FBSDKPackage;
 
 import cl.json.RNSharePackage;
 
