@@ -1,13 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.facebook.f8">
+    package="com.utlea.eweek">
     versionCode="10000323"
     versionName="v1.0"
 
     <permission
-        android:name="com.facebook.f8.permission.C2D_MESSAGE"
+        android:name="com.utlea.eweek.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="com.facebook.f8.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.utlea.eweek.permission.C2D_MESSAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -30,7 +30,7 @@
         android:permission="com.google.android.c2dm.permission.SEND">
         <intent-filter>
           <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-          <category android:name="com.facebook.f8" />
+          <category android:name="com.utlea.eweek" />
         </intent-filter>
       </receiver>
 
@@ -44,7 +44,7 @@
       </service>
 
       <activity
-        android:name=".MainActivity"
+        android:name="com.utlea.eweek.MainActivity"
         android:label="@string/app_name"
         android:screenOrientation="portrait">
         <intent-filter>
