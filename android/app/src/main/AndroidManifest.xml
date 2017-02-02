@@ -1,6 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.facebook.f8">
+    versionCode="10000323"
+    versionName="v1.0"
+
     <permission
         android:name="com.facebook.f8.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
