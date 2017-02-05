@@ -201,7 +201,7 @@ platform :ios do
 
     # Upload to App Store
     appstore(
-      skip_screenshot: true,
+      # skip_screenshot: true,
       force: true # Skip HTML report file verification
     )
 
