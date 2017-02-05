@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		002BD47E1CA7399D00E80F7A /* F8Scrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 002BD47D1CA7399D00E80F7A /* F8Scrolling.m */; };
 		0086BC3A1C90DDE500EC8D24 /* Splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0086BC391C90DDE500EC8D24 /* Splash@2x.png */; };
-		0095423B1C175AB600433EAF /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 0095423A1C175AA200433EAF /* libBVLinearGradient.a */; };
+		0095423B1C175AB600433EAF /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0095423A1C175AA200433EAF /* libBVLinearGradient.a */; };
 		00AE9D3C1C44464400514148 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00AE9D3B1C44464400514148 /* Default-568h@2x.png */; };
 		00D006A71CA9D08A001C592C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00D006A61CA9D08A001C592C /* Settings.bundle */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0095423B1C175AB600433EAF /* ReferenceProxy in Frameworks */,
+				0095423B1C175AB600433EAF /* libBVLinearGradient.a in Frameworks */,
 				7A7931406B2560B8A7347FB6 /* libPods-F8v2.a in Frameworks */,
 				76BB7E0D75870CB7E08ECE21 /* libPods-EWeek.a in Frameworks */,
 			);
@@ -428,6 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 9GGQU4DHVC;
 				HEADER_SEARCH_PATHS = (
@@ -454,6 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = 9GGQU4DHVC;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
