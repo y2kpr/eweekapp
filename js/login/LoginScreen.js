@@ -65,23 +65,14 @@ class LoginScreen extends React.Component {
           />
         </TouchableOpacity>
         <View style={styles.section}>
-          <Animated.Image
-            style={this.fadeIn(0)}
-            source={require('./img/devconf-logo.png')}
-          />
-        </View>
-        <View style={styles.section}>
           <Animated.Text style={[styles.h1, this.fadeIn(700, -20)]}>
-            code to
-          </Animated.Text>
-          <Animated.Text style={[styles.h1, {marginTop: -30}, this.fadeIn(700, 20)]}>
-            connect
+            UT EWeek
           </Animated.Text>
           <Animated.Text style={[styles.h2, this.fadeIn(1000, 10)]}>
-            April 12 + 13 / Fort Mason Center
+            Feb 27 - 03 March
           </Animated.Text>
           <Animated.Text style={[styles.h3, this.fadeIn(1200, 10)]}>
-            SAN FRANCISCO, CALIFORNIA
+            AUSTIN, TEXAS
           </Animated.Text>
         </View>
         <InfoModal />

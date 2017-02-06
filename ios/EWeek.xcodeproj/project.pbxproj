@@ -16,6 +16,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		76BB7E0D75870CB7E08ECE21 /* libPods-EWeek.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D863481659126D6E7DD51A /* libPods-EWeek.a */; };
+		CE6073341E48E6800079E87D /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0095423A1C175AA200433EAF /* libBVLinearGradient.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6073341E48E6800079E87D /* libBVLinearGradient.a in Frameworks */,
 				76BB7E0D75870CB7E08ECE21 /* libPods-EWeek.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,7 +213,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = 9GGQU4DHVC;
+						DevelopmentTeam = 6SJHMR9UMT;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -429,7 +431,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 6;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = 9GGQU4DHVC;
+				DEVELOPMENT_TEAM = 6SJHMR9UMT;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -441,7 +443,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.utlea.eweekapp;
+				PRODUCT_BUNDLE_IDENTIFIER = org.utlea.eweekappUT;
 				PRODUCT_NAME = EWeek;
 				PROVISIONING_PROFILE = "";
 			};
@@ -456,7 +458,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = 9GGQU4DHVC;
+				DEVELOPMENT_TEAM = 6SJHMR9UMT;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -468,7 +470,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.utlea.eweekapp;
+				PRODUCT_BUNDLE_IDENTIFIER = org.utlea.eweekappUT;
 				PRODUCT_NAME = EWeek;
 				PROVISIONING_PROFILE = "";
 			};
