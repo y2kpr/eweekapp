@@ -447,7 +447,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.utlea.eweekappUT;
+				PRODUCT_BUNDLE_IDENTIFIER = org.utlea.eweekapp;
 				PRODUCT_NAME = EWeek;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -475,7 +475,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.utlea.eweekappUT;
+				PRODUCT_BUNDLE_IDENTIFIER = org.utlea.eweekapp;
 				PRODUCT_NAME = EWeek;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
