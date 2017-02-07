@@ -433,7 +433,7 @@
 				CODE_SIGN_ENTITLEMENTS = EWeek.entitlements;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 9GGQU4DHVC;
 				HEADER_SEARCH_PATHS = (
@@ -462,7 +462,7 @@
 				CODE_SIGN_ENTITLEMENTS = EWeek.entitlements;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 9GGQU4DHVC;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
