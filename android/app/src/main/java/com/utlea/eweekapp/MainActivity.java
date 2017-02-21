@@ -20,7 +20,7 @@
  * DEALINGS IN THE SOFTWARE
  */
 
-package com.utlea.eweek;
+package com.utlea.eweekapp;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactPackage;

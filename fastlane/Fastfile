@@ -280,6 +280,21 @@ platform :android do
   end
 end
 
+platform :android do
+  desc "Deploy a new version to the Google Play Store"
+  lane :alpha do
+    gradle(
+      task: "assemble",
+      build_type: "Release",
+      project_dir: "android/"
+    )
+   supply(
+     track: "alpha",
+     apk: "#{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]}"
+   )
+  end
+end
+
 # More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/docs/Platforms.md
 # All available actions: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Actions.md
 

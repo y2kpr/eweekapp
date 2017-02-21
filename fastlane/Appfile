@@ -3,5 +3,8 @@ apple_id "zakkeener@utexas.edu" # Your Apple email address
 
 team_id "9GGQU4DHVC"  # Developer Portal Team ID
 
+# Android Config
+json_key_file "android/app/Google\ Play\ Android\ Developer-4983de41f9fc.json"
+package_name "com.utlea.eweekapp"
 # you can even provide different app identifiers, Apple IDs and team names per lane:
 # More information: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Appfile.md
