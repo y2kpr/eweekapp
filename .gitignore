@@ -49,4 +49,4 @@ npm-debug.log
 !.elasticbeanstalk/*.global.yml
 
 fastlane/report.xml
-
+*report.xml
