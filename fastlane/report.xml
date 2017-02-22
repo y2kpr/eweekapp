@@ -5,29 +5,77 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.005281">
+      <testcase classname="fastlane.lanes" name="00: Verifying required fastlane version" time="0.000963">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.000451">
+      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.000383">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: ensure_git_status_clean" time="0.011482">
+      <testcase classname="fastlane.lanes" name="02: ensure_git_status_clean" time="0.010476">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: Switch to ios build_app lane" time="0.0004">
+      <testcase classname="fastlane.lanes" name="03: Switch to ios build_app lane" time="0.000495">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: match" time="10.523309">
+      <testcase classname="fastlane.lanes" name="04: match" time="8.602848">
         
-          <failure message="/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/actions/actions_helper.rb:48:in `execute_action'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/runner.rb:217:in `block in execute_action'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/runner.rb:213:in `chdir'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/runner.rb:213:in `execute_action'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/runner.rb:135:in `trigger_action_by_name'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/fast_file.rb:146:in `method_missing'&#10;Fastfile:76:in `block (2 levels) in parsing_binding'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/runner.rb:188:in `try_switch_to_lane'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/runner.rb:143:in `trigger_action_by_name'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/fast_file.rb:146:in `method_missing'&#10;Fastfile:200:in `block (2 levels) in parsing_binding'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/lane_manager.rb:52:in `cruise_lane'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/command_line_handler.rb:30:in `handle'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/commands_generator.rb:105:in `block (2 levels) in run'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/commander-4.4.3/lib/commander/command.rb:178:in `call'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/commander-4.4.3/lib/commander/command.rb:178:in `call'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/commander-4.4.3/lib/commander/command.rb:153:in `run'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/commander-4.4.3/lib/commander/runner.rb:446:in `run_active_command'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:38:in `run!'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/commander-4.4.3/lib/commander/delegates.rb:15:in `run!'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/commands_generator.rb:302:in `run'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/commands_generator.rb:42:in `start'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/fastlane/lib/fastlane/cli_tools_distributor.rb:59:in `take_off'&#10;/Users/zak/.fastlane/bin/bundle/lib/ruby/gems/2.2.0/gems/fastlane-2.14.2/bin/fastlane:15:in `&lt;top (required)&gt;'&#10;/Users/zak/.fastlane/bin/bundle/bin/fastlane:22:in `load'&#10;/Users/zak/.fastlane/bin/bundle/bin/fastlane:22:in `&lt;main&gt;'&#10;&#10;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;&#10;&lt;plist version=&quot;1.0&quot;&gt;&#10;  &lt;dict&gt;&#10;     &lt;key&gt;resultCode&lt;/key&gt;&#10;     &lt;integer&gt;503&lt;/integer&gt;&#10;     &lt;key&gt;userString&lt;/key&gt;&#10;     &lt;string&gt;The Apple Developer website is undergoing maintenance. For details, visit developer.apple.com/system-status.&lt;/string&gt;&#10;     &lt;key&gt;resultString&lt;/key&gt;&#10;     &lt;string&gt;The Apple Developer website is undergoing maintenance. For details, visit developer.apple.com/system-status.&lt;/string&gt;&#10;     &lt;key&gt;httpCode&lt;/key&gt;&#10;     &lt;integer&gt;503&lt;/integer&gt;&#10;     &lt;key&gt;userLocale&lt;/key&gt;&#10;     &lt;string&gt;en_US&lt;/string&gt;&#10;  &lt;/dict&gt;&#10;&lt;/plist&gt;&#10;" />
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: increment_build_number" time="1.927063">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: get_version_number" time="0.676299">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: Switch to ios bump_patch lane" time="0.000696">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: increment_version_number" time="1.393964">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: get_version_number" time="0.703953">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: commit_version_bump" time="0.237632">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: gym" time="82.088946">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="12: appstore" time="123.217763">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="13: add_git_tag" time="0.020082">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="14: push_to_git_remote" time="5.811747">
         
       </testcase>
     

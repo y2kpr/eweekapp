@@ -15,6 +15,9 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		31F88D3E1E5D5B6E00BCB267 /* libFBSDKLoginKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F88D3D1E5D5B6E00BCB267 /* libFBSDKLoginKit.a */; };
+		31F88D421E5D5BE000BCB267 /* libFBSDKCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F88D401E5D5BE000BCB267 /* libFBSDKCoreKit.a */; };
+		31F88D431E5D5BE000BCB267 /* libFBSDKShareKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F88D411E5D5BE000BCB267 /* libFBSDKShareKit.a */; };
 		76BB7E0D75870CB7E08ECE21 /* libPods-EWeek.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D863481659126D6E7DD51A /* libPods-EWeek.a */; };
 		CE6073341E48E6800079E87D /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0095423A1C175AA200433EAF /* libBVLinearGradient.a */; };
 /* End PBXBuildFile section */
@@ -52,6 +55,9 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = F8v2/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = F8v2/main.m; sourceTree = "<group>"; };
 		31E678601E4708490096C5D1 /* EWeek.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EWeek.entitlements; sourceTree = "<group>"; };
+		31F88D3D1E5D5B6E00BCB267 /* libFBSDKLoginKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFBSDKLoginKit.a; path = "../../../Library/Developer/Xcode/DerivedData/EWeek-etmfirsrjhsxujgcwnhxgtspjzcd/Build/Products/Debug-iphonesimulator/FBSDKLoginKit/libFBSDKLoginKit.a"; sourceTree = "<group>"; };
+		31F88D401E5D5BE000BCB267 /* libFBSDKCoreKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFBSDKCoreKit.a; path = "../../../Library/Developer/Xcode/DerivedData/EWeek-etmfirsrjhsxujgcwnhxgtspjzcd/Build/Products/Debug-iphonesimulator/FBSDKCoreKit/libFBSDKCoreKit.a"; sourceTree = "<group>"; };
+		31F88D411E5D5BE000BCB267 /* libFBSDKShareKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFBSDKShareKit.a; path = "../../../Library/Developer/Xcode/DerivedData/EWeek-etmfirsrjhsxujgcwnhxgtspjzcd/Build/Products/Debug-iphonesimulator/FBSDKShareKit/libFBSDKShareKit.a"; sourceTree = "<group>"; };
 		3F2AE10902A4B3DF9B9ADD12 /* Pods-F8v2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-F8v2.release.xcconfig"; path = "Pods/Target Support Files/Pods-F8v2/Pods-F8v2.release.xcconfig"; sourceTree = "<group>"; };
 		4A2686D1202CA55CE40FCD89 /* Pods-EWeek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EWeek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EWeek/Pods-EWeek.debug.xcconfig"; sourceTree = "<group>"; };
 		75ADB9FA289B2D242EFDC946 /* Pods-EWeek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EWeek.release.xcconfig"; path = "Pods/Target Support Files/Pods-EWeek/Pods-EWeek.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F88D421E5D5BE000BCB267 /* libFBSDKCoreKit.a in Frameworks */,
+				31F88D431E5D5BE000BCB267 /* libFBSDKShareKit.a in Frameworks */,
+				31F88D3E1E5D5B6E00BCB267 /* libFBSDKLoginKit.a in Frameworks */,
 				CE6073341E48E6800079E87D /* libBVLinearGradient.a in Frameworks */,
 				76BB7E0D75870CB7E08ECE21 /* libPods-EWeek.a in Frameworks */,
 			);
@@ -110,6 +119,9 @@
 		3F4DDA6DC90E123F105F7DF6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				31F88D401E5D5BE000BCB267 /* libFBSDKCoreKit.a */,
+				31F88D411E5D5BE000BCB267 /* libFBSDKShareKit.a */,
+				31F88D3D1E5D5B6E00BCB267 /* libFBSDKLoginKit.a */,
 				AD44AA9DD03A6B80ABA2B850 /* libPods-F8v2.a */,
 				D7D863481659126D6E7DD51A /* libPods-EWeek.a */,
 			);
