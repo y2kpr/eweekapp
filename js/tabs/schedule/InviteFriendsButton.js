@@ -44,7 +44,7 @@ class InviteFriendsButton extends React.Component {
     return (
       <F8Button
         style={style}
-        caption="Invite friends to the F8 app"
+        caption="Invite friends to the EWeek app"
         onPress={() => this.inviteFriends()}
       />
     );
