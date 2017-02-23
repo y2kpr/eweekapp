@@ -25,13 +25,18 @@
 'use strict';
 
 var CommonQuestions = require('./CommonQuestions');
+var Linking = require('Linking');
 var LinksList = require('./LinksList');
 var ListContainer = require('ListContainer');
 var PureListView = require('../../common/PureListView');
 var React = require('React');
 var Relay = require('react-relay');
+var { Text } = require('F8Text');
 var View = require('View');
 var WiFiDetails = require('./WiFiDetails');
+var StyleSheet = require('StyleSheet');
+var F8Touchable = require('F8Touchable');
+var F8Colors = require('F8Colors');
 
 
 const POLICIES_LINKS = [{
@@ -40,9 +45,6 @@ const POLICIES_LINKS = [{
 }, {
   title: 'Data Policy',
   url: 'https://m.facebook.com/policies?_rdr',
-}, {
-  title: 'Code of Conduct',
-  url: 'https://www.fbf8.com/code-of-conduct',
 }];
 
 function F8InfoView() {
@@ -56,18 +58,22 @@ function F8InfoView() {
   );
 }
 
+
 function InfoList({viewer: {config, faqs, pages}, ...props}) {
   return (
     <PureListView
       renderEmptyList={() => (
         <View>
-          <WiFiDetails
-            network={config.wifiNetwork}
-            password={config.wifiPassword}
-          />
-          <CommonQuestions faqs={faqs} />
-          <LinksList title="Facebook pages" links={pages} />
-          <LinksList title="Facebook policies" links={POLICIES_LINKS} />
+            <F8Touchable onPress={() =>
+                {
+                    Linking.openURL("https://www.bit.ly/utleaeweek1");
+                      }}>
+        <View style={styles.row}>
+          <Text style={styles.title} numberOfLines={2}>
+            Link to Event Registration
+          </Text>
+        </View>
+      </F8Touchable>
         </View>
       )}
       {...(props: any /* flow can't guarantee the shape of props */)}
@@ -94,6 +100,32 @@ InfoList = Relay.createContainer(InfoList, {
         }
       }
     `,
+  },
+});
+var styles = StyleSheet.create({
+  separator: {
+    marginHorizontal: 20,
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    backgroundColor: 'white',
+    height: 60,
+  },
+  title: {
+    fontSize: 17,
+    color: F8Colors.darkText,
+    flex: 1,
+  },
+  button: {
+    padding: 10,
+  },
+  like: {
+    letterSpacing: 1,
+    color: F8Colors.actionText,
+    fontSize: 12,
   },
 });
 
