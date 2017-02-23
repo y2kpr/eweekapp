@@ -120,7 +120,7 @@ class LoginScreen extends React.Component {
                 UT EWeek
             </Animated.Text>
                 <Animated.Text style={[styles.h2, this.fadeIn(1000, 10)]}>
-                Feb 27 - 03 March
+                Feb 27 - 07 March
             </Animated.Text>
                 <Animated.Text style={[styles.h3, this.fadeIn(1200, 10)]}>
                 AUSTIN, TEXAS
