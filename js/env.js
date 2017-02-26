@@ -25,8 +25,8 @@
 'use strict';
 
 module.exports = {
-  testMenuEnabled: true,
+  testMenuEnabled: false,
   serverURL: 'http://parse-env.us-east-2.elasticbeanstalk.com',
-  version: 323,
+  version: 1337,
   fontFamily: undefined,
 };
