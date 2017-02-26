@@ -49,7 +49,12 @@ const POLICIES_LINKS = [{
 
 const CREDIT_LINKS = [{
     title: 'MAN 337',
-    url: 'https://docs.google.com/forms/d/e/1FAIpQLSfZxGmPnJ19JGWiq3HUuuD4tLLkiXXGuEe7ECjnzMPa-dLPtQ/viewform?c=0&w=1',
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLSfZxGmPnJ19JGWiq3HUuuD4tLLkiXXGuEe7ECjnzMPa-dLPtQ/viewform?c=0&w=1'
+}];
+
+const VOLUNTEER_LINKS = [{
+    title: 'Check-in Form',
+    url: 'https://www.bit.ly/utleaeweek1'
 }];
 
 
@@ -71,16 +76,11 @@ function InfoList({viewer: {config, faqs, pages}, ...props}) {
       renderEmptyList={() => (
         <View>
               <LinksList title="Extra Credit" links={CREDIT_LINKS} />
-            <F8Touchable onPress={() =>
-                {
-                    Linking.openURL("https://www.bit.ly/utleaeweek1");
-                      }}>
+              <LinksList title="For Volunteers" links={VOLUNTEER_LINKS} />
         <View style={styles.row}>
           <Text style={styles.title} numberOfLines={2}>
             Link to Event Registration
           </Text>
-        </View>
-      </F8Touchable>
         </View>
       )}
       {...(props: any /* flow can't guarantee the shape of props */)}
