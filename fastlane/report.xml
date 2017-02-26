@@ -5,77 +5,62 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: Verifying required fastlane version" time="0.00195">
+      <testcase classname="fastlane.lanes" name="00: Verifying required fastlane version" time="0.002732">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.002958">
+      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.001788">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="02: ensure_git_status_clean" time="0.009475">
+      <testcase classname="fastlane.lanes" name="02: ensure_git_status_clean" time="0.010526">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="03: Switch to ios build_app lane" time="0.001622">
+      <testcase classname="fastlane.lanes" name="03: Switch to ios build_app lane" time="0.00169">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="04: match" time="6.734171">
+      <testcase classname="fastlane.lanes" name="04: match" time="27.198647">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="05: increment_build_number" time="2.308254">
+      <testcase classname="fastlane.lanes" name="05: increment_build_number" time="1.44222">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="06: get_version_number" time="0.595118">
+      <testcase classname="fastlane.lanes" name="06: get_version_number" time="0.625935">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="07: Switch to ios bump_patch lane" time="0.002643">
+      <testcase classname="fastlane.lanes" name="07: Switch to ios bump_patch lane" time="0.00275">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="08: increment_version_number" time="1.163963">
+      <testcase classname="fastlane.lanes" name="08: increment_version_number" time="1.205469">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="09: get_version_number" time="0.579373">
+      <testcase classname="fastlane.lanes" name="09: get_version_number" time="0.590053">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="10: commit_version_bump" time="0.2308">
+      <testcase classname="fastlane.lanes" name="10: commit_version_bump" time="0.232435">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="11: gym" time="70.955813">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="12: appstore" time="105.752029">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="13: add_git_tag" time="0.022006">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="14: push_to_git_remote" time="5.244745">
+      <testcase classname="fastlane.lanes" name="11: gym" time="10.686831">
         
       </testcase>
     

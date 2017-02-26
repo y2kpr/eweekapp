@@ -92,35 +92,35 @@ class GeneralScheduleView extends React.Component {
         stickyHeader={filterHeader}
         rightItem={filterItem}>
         <ScheduleListView
-          title="Mon"
+          title="M"
           day={1}
           sessions={this.props.sessions}
           renderEmptyList={this.renderEmptyList}
           navigator={this.props.navigator}
         />
         <ScheduleListView
-          title="Tues"
+          title="T"
           day={2}
           sessions={this.props.sessions}
           renderEmptyList={this.renderEmptyList}
           navigator={this.props.navigator}
         />
         <ScheduleListView
-          title="Wed"
+          title="W"
           day={3}
           sessions={this.props.sessions}
           renderEmptyList={this.renderEmptyList}
           navigator={this.props.navigator}
         />
         <ScheduleListView
-          title="Thurs"
+          title="Th"
           day={4}
           sessions={this.props.sessions}
           renderEmptyList={this.renderEmptyList}
           navigator={this.props.navigator}
         />
         <ScheduleListView
-          title="Fri"
+          title="F"
           day={5}
           sessions={this.props.sessions}
           renderEmptyList={this.renderEmptyList}
