@@ -47,6 +47,12 @@ const POLICIES_LINKS = [{
   url: 'https://m.facebook.com/policies?_rdr',
 }];
 
+const CREDIT_LINKS = [{
+    title: 'MAN 337',
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLSfZxGmPnJ19JGWiq3HUuuD4tLLkiXXGuEe7ECjnzMPa-dLPtQ/viewform?c=0&w=1',
+}];
+
+
 function F8InfoView() {
   return (
     <ListContainer
@@ -64,6 +70,7 @@ function InfoList({viewer: {config, faqs, pages}, ...props}) {
     <PureListView
       renderEmptyList={() => (
         <View>
+              <LinksList title="Extra Credit" links={CREDIT_LINKS} />
             <F8Touchable onPress={() =>
                 {
                     Linking.openURL("https://www.bit.ly/utleaeweek1");

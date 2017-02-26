@@ -66,20 +66,41 @@ class FriendsScheduleView extends React.Component {
         backgroundColor={'#5597B8'}
         selectedSectionColor="#51CDDA"
         leftItem={backItem}>
-        <ScheduleListView
-          title="Day 1"
-          day={1}
-          sessions={this.props.sessions}
-          renderEmptyList={this.renderEmptyList}
-          navigator={this.props.navigator}
-        />
-        <ScheduleListView
-          title="Day 2"
-          day={2}
-          sessions={this.props.sessions}
-          renderEmptyList={this.renderEmptyList}
-          navigator={this.props.navigator}
-        />
+      <ScheduleListView
+        title="M"
+        day={1}
+        sessions={this.props.sessions}
+        renderEmptyList={this.renderEmptySessionsList}
+        navigator={this.props.navigator}
+      />
+      <ScheduleListView
+        title="T"
+        day={2}
+        sessions={this.props.sessions}
+        renderEmptyList={this.renderEmptySessionsList}
+        navigator={this.props.navigator}
+      />
+            <ScheduleListView
+        title="W"
+        day={3}
+        sessions={this.props.sessions}
+        renderEmptyList={this.renderEmptySessionsList}
+        navigator={this.props.navigator}
+            />
+            <ScheduleListView
+        title="Th"
+        day={4}
+        sessions={this.props.sessions}
+        renderEmptyList={this.renderEmptySessionsList}
+        navigator={this.props.navigator}
+            />
+            <ScheduleListView
+        title="F"
+        day={5}
+        sessions={this.props.sessions}
+        renderEmptyList={this.renderEmptySessionsList}
+        navigator={this.props.navigator}
+            />
       </ListContainer>
     );
   }
