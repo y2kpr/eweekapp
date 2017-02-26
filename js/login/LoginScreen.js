@@ -23,6 +23,7 @@
  */
 'use strict';
 
+const {LayoutAnimation, Keyboard} = require('react-native');
 var Animated = require('Animated');
 var Dimensions = require('Dimensions');
 var F8Colors = require('F8Colors');
@@ -35,59 +36,100 @@ var { Text } = require('F8Text');
 var InfoModal = require('../common/InfoModal');
 var LoginButton = require('../common/LoginButton');
 var TouchableOpacity = require('TouchableOpacity');
+var Metrics = require('../Metrics');
 
 var { skipInfo } = require('../actions');
 var { connect } = require('react-redux');
 
 class LoginScreen extends React.Component {
-  state = {
-    anim: new Animated.Value(0),
-  };
 
-  componentDidMount() {
-    Animated.timing(this.state.anim, {toValue: 3000, duration: 3000}).start();
-  }
+    keyboardDidShowListener: Object
+    keyboardDidHideListener: Object
 
-  render() {
-    return (
-      <Image
-        style={styles.container}
-        source={require('./img/login-background.png')}>
-        <StatusBar barStyle="default" />
-        <TouchableOpacity
-          accessibilityLabel="Skip login"
-          accessibilityTraits="button"
-          style={styles.skip}
-          onPress={() => this.props.dispatch(skipInfo())}>
-          <Animated.Image
+    componentDidMount() {
+        Animated.timing(this.state.anim, {toValue: 3000, duration: 3000}).start();
+    }
+
+      constructor() {
+          super();
+          this.state = {
+              visibleHeight: Metrics.screenHeight,
+              topLogo: { width: Metrics.screenWidth },
+              anim: new Animated.Value(0),
+              h1FontSize: Math.round(74 * scale),
+              h2FontSize: 17,
+              h3FontSize: 12
+          }
+      }
+
+      componentWillMount () {
+          // Using keyboardWillShow/Hide looks 1,000 times better, but doesn't work on Android
+          // TODO: Revisit this if Android begins to support - https://github.com/facebook/react-native/issues/3468
+          this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this.keyboardDidShow.bind(this))
+          this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this.keyboardDidHide.bind(this))
+      }
+
+      componentWillUnmount () {
+          this.keyboardDidShowListener.remove()
+          this.keyboardDidHideListener.remove()
+      }
+
+      keyboardDidShow(e) {
+          // Animation types easeInEaseOut/linear/spring
+          LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
+          let newSize = Metrics.screenHeight - e.endCoordinates.height
+          this.setState({
+              visibleHeight: newSize,
+              topLogo: {height: 70},
+              h1: Math.round(37 * scale),
+              h2: 8,
+              h3: 6
+          })
+      }
+
+      keyboardDidHide(e) {
+          // Animation types easeInEaseOut/linear/spring
+          LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
+          this.setState({
+              visibleHeight: Metrics.screenHeight,
+              topLogo: {width: Metrics.screenWidth},
+              h1: {fontSize: Math.round(74 * scale)},
+              h2: {fontSize: 17},
+              h3: {fontSize: 12}
+          })
+      }
+
+    render() {
+        return (
+                <Image
+            style={styles.container}
+            source={require('./img/login-background.png')}>
+                <StatusBar barStyle="default" />
+                <TouchableOpacity
+            accessibilityLabel="Skip login"
+            accessibilityTraits="button"
+            style={styles.skip}
+            onPress={() => this.props.dispatch(skipInfo())}>
+                <Animated.Image
             style={this.fadeIn(2800)}
             source={require('./img/x.png')}
-          />
-        </TouchableOpacity>
-        <View style={styles.section}>
-          <Animated.Image
-            style={this.fadeIn(0)}
-            source={require('./img/devconf-logo.png')}
-          />
-        </View>
-        <View style={styles.section}>
-          <Animated.Text style={[styles.h1, this.fadeIn(700, -20)]}>
-            code to
-          </Animated.Text>
-          <Animated.Text style={[styles.h1, {marginTop: -30}, this.fadeIn(700, 20)]}>
-            connect
-          </Animated.Text>
-          <Animated.Text style={[styles.h2, this.fadeIn(1000, 10)]}>
-            April 12 + 13 / Fort Mason Center
-          </Animated.Text>
-          <Animated.Text style={[styles.h3, this.fadeIn(1200, 10)]}>
-            SAN FRANCISCO, CALIFORNIA
-          </Animated.Text>
-        </View>
-        <InfoModal />
-      </Image>
-    );
-  }
+                />
+                </TouchableOpacity>
+                <View style={[styles.section, styles.topLogo]}>
+                <Animated.Text style={[styles.h1, this.fadeIn(700, -20)]}>
+                UT EWeek
+            </Animated.Text>
+                <Animated.Text style={[styles.h2, this.fadeIn(1000, 10)]}>
+                Feb 27 - 07 March
+            </Animated.Text>
+                <Animated.Text style={[styles.h3, this.fadeIn(1200, 10)]}>
+                AUSTIN, TEXAS
+            </Animated.Text>
+                </View>
+                <InfoModal />
+                </Image>
+        );
+    }
 
   fadeIn(delay, from = 0) {
     const {anim} = this.state;
@@ -118,7 +160,7 @@ var styles = StyleSheet.create({
     // Image's source contains explicit size, but we want
     // it to prefer flex: 1
     width: undefined,
-    height: undefined,
+    height: undefined
   },
   section: {
     flex: 1,
@@ -131,7 +173,7 @@ var styles = StyleSheet.create({
   h1: {
     fontWeight: 'bold',
     textAlign: 'center',
-    fontSize: Math.round(74 * scale),
+      fontSize: Math.round(74 * scale),
     color: F8Colors.darkText,
     backgroundColor: 'transparent',
   },

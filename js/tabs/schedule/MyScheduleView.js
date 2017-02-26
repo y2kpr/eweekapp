@@ -127,6 +127,27 @@ class MyScheduleView extends React.Component {
         renderEmptyList={this.renderEmptySessionsList}
         navigator={this.props.navigator}
       />,
+      <ScheduleListView
+        title="Day 3"
+        day={3}
+        sessions={this.props.sessions}
+        renderEmptyList={this.renderEmptyList}
+        navigator={this.props.navigator}
+      />,
+      <ScheduleListView
+        title="Day 4"
+        day={4}
+        sessions={this.props.sessions}
+        renderEmptyList={this.renderEmptyList}
+        navigator={this.props.navigator}
+      />,
+      <ScheduleListView
+        title="Day 5"
+        day={5}
+        sessions={this.props.sessions}
+        renderEmptyList={this.renderEmptyList}
+        navigator={this.props.navigator}
+      />,
       <FriendsListView
         title="Friends"
         friends={this.props.friends}

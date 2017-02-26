@@ -31,6 +31,7 @@ ios/F8v2.xcworkspace
 *.keystore
 local.properties
 *.iml
+*4983de41f9fc.json
 
 # node.js
 #
@@ -46,3 +47,6 @@ npm-debug.log
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+fastlane/report.xml
+*report.xml

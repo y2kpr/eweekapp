@@ -5,22 +5,57 @@
 
 const React = require('React');
 const Animated = require('Animated');
-const {Alert, StyleSheet, TextInput} = require('react-native');
+const {Alert, StyleSheet, TextInput, LayoutAnimation, Keyboard} = require('react-native');
 const F8Button = require('F8Button');
 var { Text } = require('F8Text');
 var { connect } = require('react-redux');
 var { postAttendee } = require('../actions/parse')
 var { Form, InputField,
   Separator, SwitchField, LinkField ,
-  PickerField }  = require('react-native-form-generator');
+      PickerField, KeyboardAwareScrollView }  = require('react-native-form-generator');
+var Metrics = require('../Metrics/')
 
   class InfoModal extends React.Component {
-    constructor() {
-      super();
-      this.state = {
-        formData:{name:"initial"}
+
+      keyboardDidShowListener: Object
+      keyboardDidHideListener: Object
+
+      constructor() {
+          super();
+          this.state = {
+              formData:{name:"initial"},
+              formMargin: {marginBottom: 0}
+          }
       }
-    }
+
+      componentWillMount () {
+          // Using keyboardWillShow/Hide looks 1,000 times better, but doesn't work on Android
+          // TODO: Revisit this if Android begins to support - https://github.com/facebook/react-native/issues/3468
+          this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this.keyboardDidShow.bind(this))
+          this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this.keyboardDidHide.bind(this))
+      }
+
+      componentWillUnmount () {
+          this.keyboardDidShowListener.remove()
+          this.keyboardDidHideListener.remove()
+      }
+
+      keyboardDidShow(e) {
+          // Animation types easeInEaseOut/linear/spring
+          LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
+          let newSize = Metrics.screenHeight - e.endCoordinates.height
+          this.setState({
+              formMargin: {marginBottom: 300}
+          })
+      }
+
+      keyboardDidHide(e) {
+          // Animation types easeInEaseOut/linear/spring
+          LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
+          this.setState({
+              formMargin: {marginBottom: 0}
+          })
+      }
 
     isValidFormData(formData){
       // Validate email
@@ -53,27 +88,34 @@ var { Form, InputField,
         this.state.formData.year, this.state.formData.major));
     }
 
-    render() {
-      return(<Form
-        ref="profile_info_form"
-        label="Some general info about you"
-        onChange={this.handleFormChange.bind(this)}>
-        <InputField ref='name' label='Name' placeholder='Name'/>
-        <InputField ref='email' label='University email' placeholder='University Email'/>
-        <PickerField ref='year' label='Year'
-        options={{
-          freshman: 'Freshman',
-          sophomore: 'Sophomore',
-          junior: 'Junior',
-          senior: 'Senior',
-          graduate: 'Graduate',
-          not_applicable: 'Not Applicable'
-        }}/>
-        <InputField ref='major' label='Major' placeholder='N/A if not applicable'/>
-        <F8Button
-        type='primary' caption='Submit Profile'
-        onPress={this.handleSubmit.bind(this)}/>
-        </Form>);
+      handleFormFocus(event, reactNode){
+          this.refs.scroll.scrollToFocusedInput(event, reactNode).bind(this)
+      }
+
+      render() {
+          return(
+                  <Form
+              ref="profile_info_form"
+              label="Some general info about you"
+              onChange={this.handleFormChange.bind(this)}
+              style={this.state.formMargin}>
+                  <InputField ref='name' label='Name' placeholder='Name'/>
+                  <InputField ref='email' label='University email' placeholder='University Email'/>
+                  <PickerField ref='year' label='Year'
+                 options={{
+                     freshman: 'Freshman',
+                     sophomore: 'Sophomore',
+                     junior: 'Junior',
+                     senior: 'Senior',
+                     graduate: 'Graduate',
+                     not_applicable: 'Not Applicable'
+                 }}/>
+                 <InputField ref='major' label='Major' placeholder='N/A if not applicable'/>
+                 <F8Button
+                 type='primary' caption='Submit Profile'
+                 onPress={this.handleSubmit.bind(this)}/>
+                 </Form>
+                );
       }
 
       fadeIn(delay, from = 0) {

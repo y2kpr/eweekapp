@@ -34,15 +34,9 @@ var View = require('View');
 var WiFiDetails = require('./WiFiDetails');
 
 
-const POLICIES_LINKS = [{
-  title: 'Terms of Service',
-  url: 'https://m.facebook.com/terms?_rdr',
-}, {
-  title: 'Data Policy',
-  url: 'https://m.facebook.com/policies?_rdr',
-}, {
-  title: 'Code of Conduct',
-  url: 'https://www.fbf8.com/code-of-conduct',
+const CREDIT_LINKS = [{
+  title: 'MAN 337',
+  url: 'https://docs.google.com/forms/d/e/1FAIpQLSfZxGmPnJ19JGWiq3HUuuD4tLLkiXXGuEe7ECjnzMPa-dLPtQ/viewform?c=0&w=1',
 }];
 
 function F8InfoView() {
@@ -55,19 +49,15 @@ function F8InfoView() {
     </ListContainer>
   );
 }
-
+// WiFi details are not being used. Would we ever need it?
 function InfoList({viewer: {config, faqs, pages}, ...props}) {
   return (
     <PureListView
       renderEmptyList={() => (
         <View>
-          <WiFiDetails
-            network={config.wifiNetwork}
-            password={config.wifiPassword}
-          />
           <CommonQuestions faqs={faqs} />
           <LinksList title="Facebook pages" links={pages} />
-          <LinksList title="Facebook policies" links={POLICIES_LINKS} />
+          <LinksList title="Extra Credit" links={CREDIT_LINKS} />
         </View>
       )}
       {...(props: any /* flow can't guarantee the shape of props */)}

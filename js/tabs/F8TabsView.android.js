@@ -110,7 +110,7 @@ class F8TabsView extends React.Component {
       );
       myF8Item = (
         <MenuItem
-          title="My F8"
+          title="My EWeek"
           selected={this.props.tab === 'my-schedule'}
           onPress={this.onTabSelect.bind(this, 'my-schedule')}
           icon={require('./schedule/img/my-schedule-icon.png')}
@@ -120,16 +120,18 @@ class F8TabsView extends React.Component {
     } else {
       accountItem = (
         <View>
-          <Image source={require('./img/logo.png')} />
+        <Text style={styles.header}>
+          UT EWeek
+        </Text>
           <Text style={styles.name}>
-            APRIL 12 + 13 / SAN FRANCISCO
+            FEB 27 - MARCH 7 / AUSTIN
           </Text>
         </View>
       );
       loginItem = (
         <View style={styles.loginPrompt}>
           <Text style={styles.loginText}>
-            Log in to find your friends at F8.
+            Log in to find your friends at EWeek.
           </Text>
           <LoginButton source="Drawer" />
         </View>
@@ -150,13 +152,6 @@ class F8TabsView extends React.Component {
           selectedIcon={scheduleIconSelected}
         />
         {myF8Item}
-        <MenuItem
-          title="Maps"
-          selected={this.props.tab === 'map'}
-          onPress={this.onTabSelect.bind(this, 'map')}
-          icon={require('./maps/img/maps-icon.png')}
-          selectedIcon={require('./maps/img/maps-icon-active.png')}
-        />
         <MenuItem
           title="Notifications"
           selected={this.props.tab === 'notifications'}

@@ -20,7 +20,7 @@
  * DEALINGS IN THE SOFTWARE
  */
 
-package com.utlea.eweek;
+package com.utlea.eweekapp;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactPackage;
@@ -40,7 +40,7 @@ import java.util.List;
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.microsoft.codepush.react.CodePush;
 import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
-import com.utlea.reactnative.androidsdk.FBSDKPackage;
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
 
 import cl.json.RNSharePackage;
 

@@ -74,7 +74,8 @@ class GeneralScheduleView extends React.Component {
     const filterItem = {
       icon: require('../../common/img/filter.png'),
       title: 'Filter',
-      onPress: this.openFilterScreen,
+      // We do not have filters implemented. Use this for something else?
+      // onPress: this.openFilterScreen,
     };
 
     const filterHeader = Object.keys(this.props.filter).length > 0
