@@ -47,6 +47,9 @@
     "eslint-plugin-react": "~5.2.2",
     "jest-cli": "~13.0.0"
   },
+  "optionalDependencies": {
+    "fsevents": "*"
+  },
   "jest": {
     "haste": {
       "defaultPlatform": "ios",

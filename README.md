@@ -76,6 +76,7 @@ Facebook created a series of tutorials at [makeitopen.com](http://makeitopen.com
   $ adb reverse tcp:8081 tcp:8081   # required to ensure the Android app can
   $ adb reverse tcp:8080 tcp:8080   # access the Packager and GraphQL server
   ```
+  If react-native command is not recognized, run `npm install -g react-native-cli` to install it.
 
 
 7. **Running on iOS:**
