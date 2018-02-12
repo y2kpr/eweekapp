@@ -127,12 +127,11 @@ var F8Navigator = React.createClass({
         />
       );
     }
-    // We do not have filters implemented. Use this for something else?
-    // if (route.filter) {
-      // return (
-        // <FilterScreen navigator={navigator} />
-      // );
-    // }
+    if (route.filter) {
+      return (
+        <FilterScreen navigator={navigator} />
+      );
+    }
     if (route.friend) {
       return (
         <FriendsScheduleView

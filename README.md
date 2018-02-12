@@ -16,15 +16,15 @@ Facebook created a series of tutorials at [makeitopen.com](http://makeitopen.com
   - Xcode 7.3 +
 2. [CocoaPods](http://cocoapods.org) (only for iOS)
   - Version 1.0+ recommended (`gem install cocoapods --pre`)
-3. [MongoDB](https://www.mongodb.org/downloads) (needed to run Parse Server locally)
+3. [MongoDB](https://www.mongodb.org/downloads) (if you want to run Parse Server locally)
 
 ## Setup
 
 1. **Clone the repo**
 
   ```
-  $ git clone https://github.com/fbsamples/f8app.git
-  $ cd f8app
+  $ git clone https://github.com/y2kpr/eweekapp.git
+  $ cd eweekapp
   ```
 
 2. **Install dependencies** (npm v3+):
