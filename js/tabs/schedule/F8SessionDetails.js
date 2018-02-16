@@ -41,9 +41,11 @@ var { Text } = require('F8Text');
 var TouchableOpacity = require('TouchableOpacity');
 var View = require('View');
 var AddToScheduleButton = require('./AddToScheduleButton');
+var AddToGcalButton = require('./AddToGcalButton')
 
 var formatDuration = require('./formatDuration');
 var {connect} = require('react-redux');
+var Linking = require('Linking')
 var {addToSchedule, removeFromScheduleWithPrompt} = require('../../actions');
 
 var F8SessionDetails = React.createClass({
@@ -137,6 +139,9 @@ var F8SessionDetails = React.createClass({
             style={styles.shareButton}>
             <Image source={require('./img/share.png')} />
           </TouchableOpacity>
+          <AddToGcalButton
+            onPress={this.createGcalEvent}
+          />
         </ScrollView>
         <View style={styles.actions}>
           <AddToScheduleButton
@@ -170,6 +175,19 @@ var F8SessionDetails = React.createClass({
     } else {
       this.addToSchedule();
     }
+  },
+
+  createGcalEvent: function() {
+    const eventName = this.props.session.title.replace(/\s+/g, '+')
+    const startTime = (new Date(this.props.session.startTime)).toISOString().replace(/-|:|\.\d\d\d/g,"")
+    const endTime = (new Date(this.props.session.endTime)).toISOString().replace(/-|:|\.\d\d\d/g,"")
+    const dates = startTime + '/' + endTime
+    // console.log('date now is ' + dates );
+    const details = this.props.session.description.replace(/\s+/g, '+')
+    const location = this.props.session.location.replace(/\s+/g, '+')
+    const url = 'https://www.google.com/calendar/render?action=TEMPLATE&text=' + eventName + '&dates=' + dates + '&details=' + details + '&location=' + location
+    console.log('url is ' + url);
+    Linking.openURL(url).catch(err => console.error('An error occurred', err));
   },
 
   addToSchedule: function() {
@@ -231,7 +249,7 @@ var styles = StyleSheet.create({
   },
   contentContainer: {
     padding: 26,
-    paddingBottom: 60,
+    paddingBottom: 90,
   },
   miniHeader: {
     backgroundColor: 'white',
