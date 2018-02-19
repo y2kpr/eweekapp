@@ -49,6 +49,7 @@ export type Session = {
   endTime: number;
   map: ?string;
   location: ?string;
+  facebookEvent: ?string;
 };
 
 function fromParseSpeaker(speaker: Object): Speaker {
@@ -78,6 +79,7 @@ function fromParseSessions(session: Object): Session {
     endTime: session.get('endTime') && session.get('endTime').getTime(),
     map: session.get('sessionMap') && session.get('sessionMap').url(),
     location: session.get('sessionLocation'),
+    facebookEvent: session.get('facebookEvent')
   };
 }
 

@@ -105,6 +105,7 @@ var F8SessionDetails = React.createClass({
     );
 
     var title = this.props.session.title || '';
+    var fbPage = this.props.session.facebookEvent
     var isReactTalk = title.indexOf('React') > -1;
 
     return (
@@ -117,7 +118,11 @@ var F8SessionDetails = React.createClass({
           automaticallyAdjustContentInsets={false}>
           {location}
           <Text style={styles.title}>
-            {title}
+            {title + " "}
+            <Text style={styles.link}
+              onPress={() => Linking.openURL(fbPage)}>
+               (facebook)
+            </Text>
           </Text>
           <Text style={styles.description}>
             {this.props.session.description}
@@ -280,6 +285,12 @@ var styles = StyleSheet.create({
     letterSpacing: -1,
     lineHeight: 32,
     marginVertical: 20,
+  },
+  link: {
+    fontSize: 12,
+    fontWeight: 'normal',
+    textDecorationLine: 'underline',
+    color: '#0645AD'
   },
   time: {
     color: F8Colors.lightText,
