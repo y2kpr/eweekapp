@@ -18,7 +18,7 @@ type State = {
   anim: Animated.Value;
 };
 
-const LABEL = 'Add to Google Calendar'
+const LABEL = 'Add to GCal'
 
 class AddToGcalButton extends React.Component {
   props: Props;

@@ -139,15 +139,18 @@ var F8SessionDetails = React.createClass({
             style={styles.shareButton}>
             <Image source={require('./img/share.png')} />
           </TouchableOpacity>
-          <AddToGcalButton
-            onPress={this.createGcalEvent}
-          />
+
         </ScrollView>
         <View style={styles.actions}>
           <AddToScheduleButton
+            style={{width: 180}}
             addedImageSource={isReactTalk ? require('./img/added-react.png') : null}
             isAdded={this.props.isAddedToSchedule}
             onPress={this.toggleAdded}
+          />
+          <AddToGcalButton
+            style={{width: 120}}
+            onPress={this.createGcalEvent}
           />
         </View>
         <Animated.View style={[
@@ -310,6 +313,8 @@ var styles = StyleSheet.create({
   },
   actions: {
     position: 'absolute',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     left: 0,
     right: 0,
     bottom: 0,
