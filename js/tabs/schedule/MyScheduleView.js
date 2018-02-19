@@ -92,7 +92,7 @@ class MyScheduleView extends React.Component {
 
     return (
       <ListContainer
-        title="My F8"
+        title="My EWeek"
         parallaxContent={profilePicture}
         backgroundImage={require('./img/my-f8-background.png')}
         backgroundColor={'#A8D769'}
@@ -131,21 +131,21 @@ class MyScheduleView extends React.Component {
         title="Day 3"
         day={3}
         sessions={this.props.sessions}
-        renderEmptyList={this.renderEmptyList}
+        renderEmptyList={this.renderEmptySessionsList}
         navigator={this.props.navigator}
       />,
       <ScheduleListView
         title="Day 4"
         day={4}
         sessions={this.props.sessions}
-        renderEmptyList={this.renderEmptyList}
+        renderEmptyList={this.renderEmptySessionsList}
         navigator={this.props.navigator}
       />,
       <ScheduleListView
         title="Day 5"
         day={5}
         sessions={this.props.sessions}
-        renderEmptyList={this.renderEmptyList}
+        renderEmptyList={this.renderEmptySessionsList}
         navigator={this.props.navigator}
       />,
       <FriendsListView

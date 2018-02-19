@@ -124,7 +124,7 @@ class F8TabsView extends React.Component {
           UT EWeek
         </Text>
           <Text style={styles.name}>
-            FEB 27 - MARCH 7 / AUSTIN
+            FEB 26 - MARCH 2 / AUSTIN
           </Text>
         </View>
       );
