@@ -38,6 +38,7 @@ var {serverURL} = require('./env');
 function setup(): ReactClass<{}> {
   console.disableYellowBox = true;
   Parse.initialize('oss-eweek-app-2017');
+  console.log('server URL is ' + serverURL);
   Parse.serverURL = `${serverURL}/parse`;
 
   FacebookSDK.init();
