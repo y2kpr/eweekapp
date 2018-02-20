@@ -66,21 +66,21 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   CodePush:
-    :path: "../node_modules/react-native-code-push"
+    :path: ../node_modules/react-native-code-push
   React:
-    :path: "../node_modules/react-native"
+    :path: ../node_modules/react-native
   react-native-fbsdk:
-    :path: "../node_modules/react-native-fbsdk/iOS"
+    :path: ../node_modules/react-native-fbsdk/iOS
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
-  CodePush: 96e1b7358f2305daf4fdf8436c0d23a172599de9
+  CodePush: 139ce262358b947fde0592aaede49d0dd89c87de
   FBSDKCoreKit: 6e020b5db0b5bd1e01f5fb0902131befd129a502
   FBSDKLoginKit: da563567a108050ef83739c8c8c001ee9e25fa13
   FBSDKShareKit: e8e5d4ccef69b41132fe33acda26db1e33143e33
-  React: 43544faed4af6a0e8fbc4b3abd26141ed654fa49
-  react-native-fbsdk: 999c4eec5c84ed4096cc75596a70cf82f8303329
+  React: f0a99758d02c64436317ef02cc59afad21f20a76
+  react-native-fbsdk: 8a738a123494ae9ba69482a5a8e88aa2108b8245
 
 PODFILE CHECKSUM: cd8146a9b7e85f47bd80a7bbbcd68bc464b06e3e
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.4.0
