@@ -190,10 +190,10 @@ var F8SessionDetails = React.createClass({
     const startTime = (new Date(this.props.session.startTime)).toISOString().replace(/-|:|\.\d\d\d/g,"")
     const endTime = (new Date(this.props.session.endTime)).toISOString().replace(/-|:|\.\d\d\d/g,"")
     const dates = startTime + '/' + endTime
-    // console.log('date now is ' + dates );
+    console.log('date now is ' + dates );
     const details = this.props.session.description.replace(/\s+/g, '+')
     const location = this.props.session.location.replace(/\s+/g, '+')
-    const url = 'https://www.google.com/calendar/render?action=TEMPLATE&text=' + eventName + '&dates=' + dates + '&details=' + details + '&location=' + location
+    const url = 'https://www.google.com/calendar/render?action=TEMPLATE&text=' + eventName + '&dates=' + dates + '&details=' + details + '&location=' + location + '&ctz=America/Rainy_River';
     console.log('url is ' + url);
     Linking.openURL(url).catch(err => console.error('An error occurred', err));
   },
