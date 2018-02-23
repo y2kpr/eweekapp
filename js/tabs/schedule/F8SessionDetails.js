@@ -186,14 +186,17 @@ var F8SessionDetails = React.createClass({
   },
 
   createGcalEvent: function() {
-    const eventName = this.props.session.title.replace(/\s+/g, '+')
-    const startTime = (new Date(this.props.session.startTime)).toISOString().replace(/-|:|\.\d\d\d/g,"")
-    const endTime = (new Date(this.props.session.endTime)).toISOString().replace(/-|:|\.\d\d\d/g,"")
+    const eventName = this.props.session.title.replace(/\s+/g, '+');
+    // Converting the time from UTC to CST
+    let startTime = this.props.session.startTime + 21600000;
+    let endTime = this.props.session.endTime + 21600000;
+    startTime = (new Date(startTime)).toISOString().replace(/-|:|\.\d\d\d/g,"")
+    endTime = (new Date(endTime)).toISOString().replace(/-|:|\.\d\d\d/g,"")
     const dates = startTime + '/' + endTime
     console.log('date now is ' + dates );
     const details = this.props.session.description.replace(/\s+/g, '+')
     const location = this.props.session.location.replace(/\s+/g, '+')
-    const url = 'https://www.google.com/calendar/render?action=TEMPLATE&text=' + eventName + '&dates=' + dates + '&details=' + details + '&location=' + location + '&ctz=America/Rainy_River';
+    const url = 'https://www.google.com/calendar/render?action=TEMPLATE&text=' + eventName + '&dates=' + dates + '&details=' + details + '&location=' + location + '&ctz=CST';
     console.log('url is ' + url);
     Linking.openURL(url).catch(err => console.error('An error occurred', err));
   },

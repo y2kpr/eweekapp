@@ -82,8 +82,8 @@ android {
         applicationId "com.utlea.eweekapp"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 10000004
-        versionName "1.0.2"
+        versionCode 10000005
+        versionName "1.0.3"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
